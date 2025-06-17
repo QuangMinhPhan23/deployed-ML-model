@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split, RandomizedSearchCV
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 from sklearn.metrics import precision_recall_fscore_support, accuracy_score
-from lazypredict.Supervised import LazyClassifier
+# from lazypredict.Supervised import LazyClassifier
 import pickle
 
 path = kagglehub.dataset_download("rakeshkapilavai/extrovert-vs-introvert-behavior-data")
@@ -30,8 +30,8 @@ x_train = scalar.fit_transform(x_train)
 x_test = scalar.transform(x_test)
 
 # lazyClassifier is used to compare different models and find the best one
-clf = LazyClassifier(verbose=0,ignore_warnings=True, custom_metric=None)
-models, predictions = clf.fit(x_train, x_test, y_train, y_test)
+# clf = LazyClassifier(verbose=0,ignore_warnings=True, custom_metric=None)
+# models, predictions = clf.fit(x_train, x_test, y_train, y_test)
 # print(models) # Show that SVC is one of the best model based on accuracy, F1 score and time taken
 
 # gridsearchcv is used to find the best hyperparameters for the model
