@@ -5,3 +5,8 @@ kagglehub
 fastapi
 uvicorn
 python-multipart
+sqlalchemy
+requests
+react
+nodejs
+npm
